@@ -10,7 +10,23 @@
   </head>
   <body>
     <%= render 'layouts/sidebar_navigation' %>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+    <div id="main-wrapper">
+      <div id="header">
+        <% if current_page?(root_path) %>
+          <p>All Posts</p>
+        <% elsif current_page?(about_path) %>
+          <p>About Me</p>
+        <% elsif current_page?(contact_path) %>
+          <p>Contact Me</p>
+        <% else %>
+          <%= link_to 'Back to all posts', root_url %>
+        <% end %>
+        <div class="buttons">
+          <%= link_to 'Logout', '#', class: 'button' %>
+        </div>
+      </div>
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
