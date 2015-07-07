@@ -5,7 +5,19 @@
 // ==============================
 //  GLOBAL STYLES
 // ==============================
+
+//  Fonts
 @import url(http://fonts.googleapis.com/css?family=Roboto);
+
+// Color Scheme
+$primary-color-dark: #0097A7;
+$primary-color: #00BCD4;
+$primary-color-light: #B2EBF2;
+$primary-color-text: #FFFFFF;
+$accent-color: #009688;
+$primary-text-color: #212121;
+$secondary-text-color: #727272;
+$divider-color: #B6B6B6;
 
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -25,7 +37,8 @@ img {
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: #000;
+  background-color: $primary-color-dark;
+  border-right: 2px solid $accent-color;
   .sidebar-nav {
     position: absolute;
     top: 0;
@@ -39,10 +52,10 @@ img {
       a {
         display: block;
         text-decoration: none;
-        color: #999999;
+        color: $primary-color-text;
         &:hover {
           text-decoration: none;
-          color: #fff;
+          color: $primary-color-text;
           background: rgba(255,255,255,0.2);
         }
         &:active, &:focus {
@@ -55,10 +68,10 @@ img {
       font-size: 18px;
       line-height: 60px;
       a {
-        color: #999999;
+        color: $primary-color-text;
         &:hover {
-          color: #fff;
-          background: none;
+          color: $primary-color-text;
+          background: rgba(255,255,255,0.2);
         }
       }
     }

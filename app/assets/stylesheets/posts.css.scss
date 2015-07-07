@@ -6,8 +6,11 @@
 //  POST#INDEX STYLES
 // ==============================
 #posts-wrapper {
-  width: 100%;
-  position: absolute;
   margin-left: 250px;
-  padding: 15px;
+  .post-title {
+    background-color: $primary-color;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 40px;
+  }
 }
