@@ -1,7 +1,7 @@
 Blog
 ---
 The second application for my 12-App-Challenge.
-Blog is a simple application, that allows a user to create blog posts.
+my_blog is a simple application, that allows a user to create blog posts.
 
 Technology Used
 ---
