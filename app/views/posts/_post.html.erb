@@ -1,2 +1,4 @@
-<p>test title</p>
-<p>test body</p>
+<div class="post">
+  <span class="title"><%= link_to post.title, post_path(post) %></span>
+  <span class="timestamp"><%= post.created_at.strftime("%B %-d, %Y") %></span>
+</div>
