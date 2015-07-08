@@ -88,7 +88,7 @@ img {
 }
 
 // ==============================
-//  SIDEBAR NAV STYLES
+//  MAIN STYLES
 // ==============================
 #main-wrapper {
   margin-left: 250px;
@@ -104,6 +104,15 @@ img {
       color: $primary-color-text;
       font-size: 18px;
       font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+      color: $primary-color-text;
+      font-size: 18px;
+      font-weight: bold;
+      &:hover {
+        color: $accent-color;
+      }
     }
     .buttons {
       float: right;
