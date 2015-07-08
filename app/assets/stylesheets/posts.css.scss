@@ -49,6 +49,24 @@
 }
 
 // ==============================
+//  POST#EDIT STYLES
+// ==============================
+#edit-post-wrapper {
+  padding: 60px 0;
+  margin: 0;
+  .btn-accent {
+    @extend .btn;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    @include shadow(2);
+    color: $primary-color-text;
+    &:hover, &:active, &:focus {
+      color: $primary-color-text;
+    }
+  }
+}
+
+// ==============================
 //  POST#SHOW STYLES
 // ==============================
 #post-wrapper {
