@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'figaro'
+gem 'tinymce-rails'
 
 group :development, :test do
   gem 'byebug'
