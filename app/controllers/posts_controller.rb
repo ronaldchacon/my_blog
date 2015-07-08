@@ -1,17 +1,23 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.paginate(page: params[:page])
   end
 
   def new
-    @post = Post.new
+    if admin_signed_in?
+      @post = Post.new
+    else
+      flash[:error] = "Admin privilege is required to access that page"
+      redirect_to root_url
+    end
   end
 
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
       flash[:notice] = "Successfully created a new post"
+      redirect_to @post
     else
       render :new
     end
@@ -22,7 +28,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if admin_signed_in?
+      @post = Post.find(params[:id])
+    else
+      flash[:error] = "Admin privilege is required to access that page"
+      redirect_to root_url
+    end
   end
 
   def update
@@ -36,10 +47,15 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path
-    flash[:notice] = "Successfully deleted post"
+    if admin_signed_in?
+      @post = Post.find(params[:id])
+      @post.destroy
+      flash[:notice] = "Successfully deleted post"
+      redirect_to posts_path
+    else
+      flash[:error] = "Admin privilege is required to access that page"
+      redirect_to root_url
+    end
   end
 
   private
