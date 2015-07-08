@@ -26,5 +26,7 @@ end
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
+  gem 'pry-rails'
+  gem 'better_errors'
 end
 
