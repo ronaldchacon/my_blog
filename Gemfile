@@ -15,6 +15,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'figaro'
 gem 'tinymce-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'
@@ -25,5 +26,7 @@ end
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
+  gem 'pry-rails'
+  gem 'better_errors'
 end
 
