@@ -22,7 +22,12 @@
           <%= link_to 'Back to all posts', root_url %>
         <% end %>
         <div class="buttons">
-          <%= link_to 'Sign in', '#', class: 'button' %>
+          <% if user_signed_in? %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'button' %>
+            <%= link_to "My Account", edit_user_registration_path, class: 'button' %>
+          <% else %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'button' %>
+          <% end %>
         </div>
       </div>
       <%= render 'layouts/messages' %>

@@ -121,6 +121,7 @@ img {
         @extend .btn;
         background-color: $accent-color;
         border: 1px solid $accent-color;
+        margin-right: 10px;
         @include shadow(2);
         color: $primary-color-text;
         &:hover, &:active, &:focus {
