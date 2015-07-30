@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     get 'admin', to: 'devise/sessions#new'
   end
   resources :posts
+  resources :comments
   root to: 'posts#index'
 end

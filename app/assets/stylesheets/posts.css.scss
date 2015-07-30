@@ -73,3 +73,25 @@
   padding: 60px 0;
   margin: 0;
 }
+
+#comments-wrapper {
+  padding: 60px 0;
+  margin: 0;
+  h2 {
+      display: inline-block;
+    }
+  #new_comment {
+    display: none;
+  }
+  .comments {
+    .comment {
+      display: block;
+      &:first-child {
+        padding-top: 20px;
+      }
+      span.content {
+        display: block;
+      }
+    }
+  }
+}

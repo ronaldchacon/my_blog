@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.all.order('created_at DESC')
+    @comment = @post.comments.build
   end
 
   def edit

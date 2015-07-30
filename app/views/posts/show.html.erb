@@ -9,3 +9,17 @@
     </div>
   </div>
 </div>
+<div id="comments-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Comments</h2>
+        <% if user_signed_in? %>
+          <a href="#" id="new_comment_toggle">New Comment</a>
+          <%= render 'shared/form_comments' %>
+        <% end %>
+        <%= render 'shared/comments' %>
+      </div>
+    </div>
+  </div>
+</div>
