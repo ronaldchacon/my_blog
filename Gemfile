@@ -30,3 +30,7 @@ group :development do
   gem 'better_errors'
 end
 
+gem :production do
+  gem 'unicorn'
+  gem 'rails_12factor'
+end
