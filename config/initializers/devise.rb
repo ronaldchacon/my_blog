@@ -6,13 +6,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = ENV['DEVISE_SECRET_KEY']
+  # config.secret_key = '08b8873314ee569b4ce773b8fe843e34482ca3a86cd440835d6a05b140ca78d8fe4e80c036f5ed08025cb97ee3aa791dae3fdffa2673f1c65f13e67f1e65de55'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'no-reply@example.com'
+  config.mailer_sender = 'noreply@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -99,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '8266b8cf3a44a5dd2a1048429aa647bab1708a101cbcab1b93432ea19a05dd22fad0f9ed6144627786598a891e400698771d214dcde30e55e4b49e5a1dd9ead9'
+  # config.pepper = '15845d1d79d770d3b202befb6aed00f39a6cc1eabc6831647aab2d284f7897641836d09aae620d4ef90cb4fa230ebaeaf75a0969d5a5a1be2dda94d4ca8ae91b'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -153,9 +153,6 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-
-  # If true, expires auth token on session timeout.
-  # config.expire_auth_token_on_timeout = false
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -211,7 +208,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
